@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Profisee.MasterDataMaestro.Services.ServiceContracts" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Profisee.MasterDataMaestro.Services.ServiceContracts" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="Service9.xsd" namespace="http://schemas.datacontract.org/2004/07/Profisee.MasterDataMaestro.Services.Contracts.MessageContracts.Common" />
+  <xs:import schemaLocation="Service15.xsd" namespace="http://schemas.datacontract.org/2004/07/Profisee.MasterDataMaestro.Services.MessageContracts" />
+  <xs:import schemaLocation="Service10.xsd" namespace="http://schemas.profisee.com/masterdatamaestro/2010/09" />
+  <xs:complexType name="GetStagingRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Profisee.MasterDataMaestro.Services.Contracts.MessageContracts.Common" base="q1:GetRequest">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetStagingRequest" nillable="true" type="tns:GetStagingRequest" />
+  <xs:complexType name="GetStagingResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Profisee.MasterDataMaestro.Services.Contracts.MessageContracts.Common" base="q2:GetResponseOfStagingAzo1b_PEu">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetStagingResponse" nillable="true" type="tns:GetStagingResponse" />
+  <xs:complexType name="SaveStagingRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Profisee.MasterDataMaestro.Services.Contracts.MessageContracts.Common" base="q3:SaveRequestOfStagingAzo1b_PEu">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SaveStagingRequest" nillable="true" type="tns:SaveStagingRequest" />
+  <xs:complexType name="SaveStagingResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Profisee.MasterDataMaestro.Services.MessageContracts" base="q4:MaestroMessageResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SaveStagingResponse" nillable="true" type="tns:SaveStagingResponse" />
+  <xs:complexType name="DeleteStagingRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Profisee.MasterDataMaestro.Services.MessageContracts" base="q5:MaestroMessageRequest">
+        <xs:sequence>
+          <xs:element xmlns:q6="http://schemas.profisee.com/masterdatamaestro/2010/09" minOccurs="0" name="Items" nillable="true" type="q6:ArrayOfMaestroIdentifier" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeleteStagingRequest" nillable="true" type="tns:DeleteStagingRequest" />
+  <xs:complexType name="DeleteStagingResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/Profisee.MasterDataMaestro.Services.MessageContracts" base="q7:MaestroMessageResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeleteStagingResponse" nillable="true" type="tns:DeleteStagingResponse" />
+  <xs:complexType name="ProcessStagingRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/Profisee.MasterDataMaestro.Services.MessageContracts" base="q8:MaestroMessageRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ClearOnly" type="xs:boolean" />
+          <xs:element xmlns:q9="http://schemas.profisee.com/masterdatamaestro/2010/09" minOccurs="0" name="Id" nillable="true" type="q9:MaestroIdentifier" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProcessStagingRequest" nillable="true" type="tns:ProcessStagingRequest" />
+  <xs:complexType name="ProcessStagingResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/Profisee.MasterDataMaestro.Services.MessageContracts" base="q10:MaestroMessageResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProcessStagingResponse" nillable="true" type="tns:ProcessStagingResponse" />
+</xs:schema>

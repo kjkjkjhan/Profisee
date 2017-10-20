@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Profisee.MasterDataMaestro.Services.Contracts.MessageContracts.Common" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Profisee.MasterDataMaestro.Services.Contracts.MessageContracts.Common" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="Service10.xsd" namespace="http://schemas.profisee.com/masterdatamaestro/2010/09" />
+  <xs:import schemaLocation="Service15.xsd" namespace="http://schemas.datacontract.org/2004/07/Profisee.MasterDataMaestro.Services.MessageContracts" />
+  <xs:complexType name="SaveRequestOfDataVersionAzo1b_PEu">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="SaveRequestOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Profisee.MasterDataMaestro.Services.Contracts.MessageContracts.Common" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="DataVersion" Namespace="http://schemas.profisee.com/masterdatamaestro/2010/09" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Profisee.MasterDataMaestro.Services.MessageContracts" base="q1:MaestroMessageRequest">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.profisee.com/masterdatamaestro/2010/09" minOccurs="0" name="ItemList" nillable="true" type="q2:ArrayOfDataVersion" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SaveRequestOfDataVersionAzo1b_PEu" nillable="true" type="tns:SaveRequestOfDataVersionAzo1b_PEu" />
+  <xs:complexType name="GetRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Profisee.MasterDataMaestro.Services.MessageContracts" base="q3:MaestroMessageRequest">
+        <xs:sequence>
+          <xs:element xmlns:q4="http://schemas.profisee.com/masterdatamaestro/2010/09" minOccurs="0" name="ItemIdentifier" nillable="true" type="q4:MaestroIdentifier" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetRequest" nillable="true" type="tns:GetRequest" />
+  <xs:complexType name="GetResponseOfStagingAzo1b_PEu">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="GetResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Profisee.MasterDataMaestro.Services.Contracts.MessageContracts.Common" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Staging" Namespace="http://schemas.profisee.com/masterdatamaestro/2010/09" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Profisee.MasterDataMaestro.Services.MessageContracts" base="q5:MaestroMessageResponse">
+        <xs:sequence>
+          <xs:element xmlns:q6="http://schemas.profisee.com/masterdatamaestro/2010/09" minOccurs="0" name="ItemList" nillable="true" type="q6:ArrayOfStaging" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetResponseOfStagingAzo1b_PEu" nillable="true" type="tns:GetResponseOfStagingAzo1b_PEu" />
+  <xs:complexType name="SaveRequestOfStagingAzo1b_PEu">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="SaveRequestOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Profisee.MasterDataMaestro.Services.Contracts.MessageContracts.Common" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Staging" Namespace="http://schemas.profisee.com/masterdatamaestro/2010/09" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/Profisee.MasterDataMaestro.Services.MessageContracts" base="q7:MaestroMessageRequest">
+        <xs:sequence>
+          <xs:element xmlns:q8="http://schemas.profisee.com/masterdatamaestro/2010/09" minOccurs="0" name="ItemList" nillable="true" type="q8:ArrayOfStaging" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SaveRequestOfStagingAzo1b_PEu" nillable="true" type="tns:SaveRequestOfStagingAzo1b_PEu" />
+</xs:schema>

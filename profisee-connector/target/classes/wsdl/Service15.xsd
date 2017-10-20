@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Profisee.MasterDataMaestro.Services.MessageContracts" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Profisee.MasterDataMaestro.Services.MessageContracts" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="Service10.xsd" namespace="http://schemas.profisee.com/masterdatamaestro/2010/09" />
+  <xs:import schemaLocation="Service9.xsd" namespace="http://schemas.datacontract.org/2004/07/Profisee.MasterDataMaestro.Services.Contracts.MessageContracts.Common" />
+  <xs:import schemaLocation="Service11.xsd" namespace="http://schemas.microsoft.com/sqlserver/masterdataservices/2009/09" />
+  <xs:complexType name="CreateDataChangesetAnnotationRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MaestroMessageRequest">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CreateDataChangesetAnnotationRequest" nillable="true" type="tns:CreateDataChangesetAnnotationRequest" />
+  <xs:complexType name="MaestroMessageRequest">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.profisee.com/masterdatamaestro/2010/09" minOccurs="0" name="International" nillable="true" type="q1:International" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MaestroMessageRequest" nillable="true" type="tns:MaestroMessageRequest" />
+  <xs:complexType name="CreateDataChangesetAnnotationResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MaestroMessageResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CreateDataChangesetAnnotationResponse" nillable="true" type="tns:CreateDataChangesetAnnotationResponse" />
+  <xs:complexType name="MaestroMessageResponse">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.profisee.com/masterdatamaestro/2010/09" minOccurs="0" name="OperationResult" nillable="true" type="q2:MaestroOperationResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MaestroMessageResponse" nillable="true" type="tns:MaestroMessageResponse" />
+  <xs:complexType name="CreateDataTransactionAnnotationRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MaestroMessageRequest">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CreateDataTransactionAnnotationRequest" nillable="true" type="tns:CreateDataTransactionAnnotationRequest" />
+  <xs:complexType name="CreateDataTransactionAnnotationResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MaestroMessageResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CreateDataTransactionAnnotationResponse" nillable="true" type="tns:CreateDataTransactionAnnotationResponse" />
+  <xs:complexType name="CreateMemberAnnotationRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MaestroMessageRequest">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CreateMemberAnnotationRequest" nillable="true" type="tns:CreateMemberAnnotationRequest" />
+  <xs:complexType name="CreateMemberAnnotationResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MaestroMessageResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CreateMemberAnnotationResponse" nillable="true" type="tns:CreateMemberAnnotationResponse" />
+  <xs:complexType name="CreateMemberAttributeAnnotationRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MaestroMessageRequest">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CreateMemberAttributeAnnotationRequest" nillable="true" type="tns:CreateMemberAttributeAnnotationRequest" />
+  <xs:complexType name="CreateMemberAttributeAnnotationResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MaestroMessageResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CreateMemberAttributeAnnotationResponse" nillable="true" type="tns:CreateMemberAttributeAnnotationResponse" />
+  <xs:complexType name="DeleteAnnotationRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MaestroMessageRequest">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeleteAnnotationRequest" nillable="true" type="tns:DeleteAnnotationRequest" />
+  <xs:complexType name="DeleteAnnotationResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MaestroMessageResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeleteAnnotationResponse" nillable="true" type="tns:DeleteAnnotationResponse" />
+  <xs:complexType name="SaveDataVersionRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Profisee.MasterDataMaestro.Services.Contracts.MessageContracts.Common" base="q3:SaveRequestOfDataVersionAzo1b_PEu">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SaveDataVersionRequest" nillable="true" type="tns:SaveDataVersionRequest" />
+  <xs:complexType name="SaveDataVersionResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MaestroMessageResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SaveDataVersionResponse" nillable="true" type="tns:SaveDataVersionResponse" />
+  <xs:complexType name="DeleteDataVersionRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MaestroMessageRequest">
+        <xs:sequence>
+          <xs:element xmlns:q4="http://schemas.profisee.com/masterdatamaestro/2010/09" minOccurs="0" name="Items" nillable="true" type="q4:ArrayOfMaestroIdentifier" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeleteDataVersionRequest" nillable="true" type="tns:DeleteDataVersionRequest" />
+  <xs:complexType name="DeleteDataVersionResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MaestroMessageResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeleteDataVersionResponse" nillable="true" type="tns:DeleteDataVersionResponse" />
+  <xs:complexType name="CheckOutInformationRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MaestroMessageRequest">
+        <xs:sequence>
+          <xs:element xmlns:q5="http://schemas.microsoft.com/sqlserver/masterdataservices/2009/09" minOccurs="0" name="ModelId" nillable="true" type="q5:Identifier" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CheckOutInformationRequest" nillable="true" type="tns:CheckOutInformationRequest" />
+  <xs:complexType name="CheckOutInformationResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MaestroMessageResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsCheckedOut" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LastCheckedOutDateTime" type="xs:dateTime" />
+          <xs:element xmlns:q6="http://schemas.microsoft.com/sqlserver/masterdataservices/2009/09" minOccurs="0" name="LastCheckedOutUserId" nillable="true" type="q6:Identifier" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CheckOutInformationResponse" nillable="true" type="tns:CheckOutInformationResponse" />
+  <xs:simpleType name="ExcludeOptions">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="MemberObject" />
+      <xs:enumeration value="HierarchyParents" />
+      <xs:enumeration value="MemberObjectAndHierarchyParents" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ExcludeOptions" nillable="true" type="tns:ExcludeOptions" />
+  <xs:simpleType name="DataOptions">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DataAndCount" />
+      <xs:enumeration value="DataOnly" />
+      <xs:enumeration value="CountsOnly" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DataOptions" nillable="true" type="tns:DataOptions" />
+  <xs:complexType name="ArrayOfSortColumn">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SortColumn" nillable="true" type="tns:SortColumn" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSortColumn" nillable="true" type="tns:ArrayOfSortColumn" />
+  <xs:complexType name="SortColumn">
+    <xs:sequence>
+      <xs:element xmlns:q7="http://schemas.microsoft.com/sqlserver/masterdataservices/2009/09" minOccurs="0" name="Attribute" nillable="true" type="q7:Identifier" />
+      <xs:element minOccurs="0" name="IsAscending" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SortColumn" nillable="true" type="tns:SortColumn" />
+</xs:schema>

@@ -1,0 +1,14 @@
+org\mule\modules\profisee\ProfiseeConnector.class
+org\mule\modules\profisee\generated\adapters\ProfiseeConnectorProcessAdapter$1.class
+org\mule\modules\profisee\generated\config\ProfiseeNamespaceHandler.class
+org\mule\modules\profisee\generated\adapters\ProfiseeConnectorLifecycleInjectionAdapter.class
+org\mule\modules\profisee\generated\agents\DefaultSplashScreenAgent.class
+org\mule\modules\profisee\config\ConnectorConfig.class
+org\mule\modules\profisee\generated\config\ProfiseeConnectorConnectorConfigConfigDefinitionParser.class
+org\mule\modules\profisee\generated\devkit\SplashScreenAgent.class
+org\mule\tooling\ui\contribution\ProfiseeActivator.class
+org\mule\modules\profisee\generated\adapters\ProfiseeConnectorConnectorConfigWsdlProviderAdapter.class
+org\mule\modules\profisee\generated\adapters\ProfiseeConnectorProcessAdapter.class
+org\mule\modules\profisee\generated\adapters\ProfiseeConnectorCapabilitiesAdapter.class
+org\mule\modules\profisee\generated\adapters\ProfiseeConnectorMetadataAdapter.class
+org\mule\modules\profisee\generated\adapter\PoolManager.class

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.profisee.com/masterdatamaestro/eventing/2015/06" elementFormDefault="qualified" targetNamespace="http://schemas.profisee.com/masterdatamaestro/eventing/2015/06" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="Service7.xsd" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="Service5.xsd" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="Service13.xsd" namespace="http://schemas.datacontract.org/2004/07/Profisee.Common.EventProcessing.DataContracts" />
+  <xs:complexType name="ArrayOfEventSubscriberConfigurationProperty">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EventSubscriberConfigurationProperty" nillable="true" type="tns:EventSubscriberConfigurationProperty" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEventSubscriberConfigurationProperty" nillable="true" type="tns:ArrayOfEventSubscriberConfigurationProperty" />
+  <xs:complexType name="EventSubscriberConfigurationProperty">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Category" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DefaultValue" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsRequired" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsVisible" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Max" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Min" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="PicklistValues" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element minOccurs="0" name="PropertyType" type="tns:EventSubscriberConfigurationPropertyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EventSubscriberConfigurationProperty" nillable="true" type="tns:EventSubscriberConfigurationProperty" />
+  <xs:simpleType name="EventSubscriberConfigurationPropertyType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Text">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Double">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Int32">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Map">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Enum">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Bool">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ConnectionOverride">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EventSubscriberConfigurationPropertyType" nillable="true" type="tns:EventSubscriberConfigurationPropertyType" />
+  <xs:complexType name="ArrayOfSupportedSystem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SupportedSystem" nillable="true" type="tns:SupportedSystem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSupportedSystem" nillable="true" type="tns:ArrayOfSupportedSystem" />
+  <xs:complexType name="SupportedSystem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="System" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Versions" nillable="true" type="q2:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SupportedSystem" nillable="true" type="tns:SupportedSystem" />
+  <xs:complexType name="ArrayOfEventSubscriberConfigurationPropertyValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EventSubscriberConfigurationPropertyValue" nillable="true" type="tns:EventSubscriberConfigurationPropertyValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEventSubscriberConfigurationPropertyValue" nillable="true" type="tns:ArrayOfEventSubscriberConfigurationPropertyValue" />
+  <xs:complexType name="EventSubscriberConfigurationPropertyValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PropertyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EventSubscriberConfigurationPropertyValue" nillable="true" type="tns:EventSubscriberConfigurationPropertyValue" />
+  <xs:complexType name="ConnectionOverride">
+    <xs:sequence>
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Profisee.Common.EventProcessing.DataContracts" minOccurs="0" name="Credentials" nillable="true" type="q3:UserCredential" />
+      <xs:element minOccurs="0" name="EndPointType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrganizationName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OverrideType" type="tns:ConnectionType" />
+      <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConnectionOverride" nillable="true" type="tns:ConnectionOverride" />
+  <xs:simpleType name="ConnectionType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Source" />
+      <xs:enumeration value="Target" />
+      <xs:enumeration value="Both" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ConnectionType" nillable="true" type="tns:ConnectionType" />
+  <xs:complexType name="ContextInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContextErrors" nillable="true" type="tns:ArrayOfValidationMessage" />
+      <xs:element minOccurs="0" name="SourceContext" nillable="true" type="tns:MapContext" />
+      <xs:element minOccurs="0" name="TargetContext" nillable="true" type="tns:MapContext" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContextInfo" nillable="true" type="tns:ContextInfo" />
+  <xs:complexType name="ArrayOfValidationMessage">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ValidationMessage" nillable="true" type="tns:ValidationMessage" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfValidationMessage" nillable="true" type="tns:ArrayOfValidationMessage" />
+  <xs:complexType name="ValidationMessage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" type="tns:ErrorType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ValidationMessage" nillable="true" type="tns:ValidationMessage" />
+  <xs:simpleType name="ErrorType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SevereError" />
+      <xs:enumeration value="Error" />
+      <xs:enumeration value="Warning" />
+      <xs:enumeration value="Informational" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ErrorType" nillable="true" type="tns:ErrorType" />
+  <xs:complexType name="MapContext">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Entity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Model" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SystemName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SystemURL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Version" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MapContext" nillable="true" type="tns:MapContext" />
+  <xs:complexType name="ArrayOfMaestroTriggeredEvent">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MaestroTriggeredEvent" nillable="true" type="tns:MaestroTriggeredEvent" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMaestroTriggeredEvent" nillable="true" type="tns:ArrayOfMaestroTriggeredEvent" />
+  <xs:complexType name="MaestroTriggeredEvent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ExecuteContext">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MaestroTriggeredEvent" nillable="true" type="tns:MaestroTriggeredEvent" />
+  <xs:complexType name="ExecuteContext">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BeginTransactionId" type="xs:int" />
+      <xs:element minOccurs="0" name="EndTransactionId" type="xs:int" />
+      <xs:element minOccurs="0" name="EventName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Filter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Member" nillable="true" type="tns:EntityMember" />
+      <xs:element minOccurs="0" name="User" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExecuteContext" nillable="true" type="tns:ExecuteContext" />
+  <xs:complexType name="EntityMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Attributes" nillable="true" type="tns:ArrayOfIdentifier" />
+      <xs:element minOccurs="0" name="EntityId" nillable="true" type="tns:Identifier" />
+      <xs:element minOccurs="0" name="MemberCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModelId" nillable="true" type="tns:Identifier" />
+      <xs:element minOccurs="0" name="VersionId" nillable="true" type="tns:Identifier" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EntityMember" nillable="true" type="tns:EntityMember" />
+  <xs:complexType name="ArrayOfIdentifier">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Identifier" nillable="true" type="tns:Identifier" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIdentifier" nillable="true" type="tns:ArrayOfIdentifier" />
+  <xs:complexType name="Identifier">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Identifier" nillable="true" type="tns:Identifier" />
+</xs:schema>

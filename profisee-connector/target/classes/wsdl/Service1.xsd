@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Profisee.MasterDataMaestro.Services.DataContracts.Portal" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Profisee.MasterDataMaestro.Services.DataContracts.Portal" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="Service5.xsd" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="Service10.xsd" namespace="http://schemas.profisee.com/masterdatamaestro/2010/09" />
+  <xs:import schemaLocation="Service.xsd" namespace="http://schemas.datacontract.org/2004/07/System.Activities" />
+  <xs:complexType name="WorkflowInstance">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.profisee.com/masterdatamaestro/2010/09" base="q1:DataContractAuditableBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Bookmarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EntityId" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="ExecutionStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsCompleted" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsInitialized" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsReadyToRun" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsSuspended" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ModelId" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SubStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SuspensionExceptionName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SuspensionReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Tasks" nillable="true" type="q1:ArrayOfWorkflowTask" />
+          <xs:element minOccurs="0" name="Version" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VersionId" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="WorkflowInitiator" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WorkflowVersion" nillable="true" type="q1:WorkflowVersion" />
+          <xs:element minOccurs="0" name="WorkflowVersionID" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WorkflowInstance" nillable="true" type="tns:WorkflowInstance" />
+  <xs:complexType name="ArrayOfWorkflowInstance">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WorkflowInstance" nillable="true" type="tns:WorkflowInstance" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWorkflowInstance" nillable="true" type="tns:ArrayOfWorkflowInstance" />
+  <xs:complexType name="WorkflowInstanceEvent">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActivityDefinitionId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EventTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RecordNumber" type="xs:long" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/System.Activities" minOccurs="0" name="WorkflowDefinitionIdentity" nillable="true" type="q2:WorkflowIdentity" />
+      <xs:element minOccurs="0" name="WorkflowInstanceId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WorkflowInstanceEvent" nillable="true" type="tns:WorkflowInstanceEvent" />
+</xs:schema>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Profisee.MasterDataMaestro.Services.DataContracts" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Profisee.MasterDataMaestro.Services.DataContracts" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="AttributeFormat">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Name" />
+      <xs:enumeration value="Code" />
+      <xs:enumeration value="NameCode" />
+      <xs:enumeration value="CodeName" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AttributeFormat" nillable="true" type="tns:AttributeFormat" />
+</xs:schema>
